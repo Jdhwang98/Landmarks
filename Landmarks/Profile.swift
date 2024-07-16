@@ -10,7 +10,7 @@ import Foundation
 struct Profile {
     var username: String
     var prefersNotification = true
-    var seasonalPhoto = Season.winter
+    var seasonalPhoto = Season.spring
     
     static let  `default` = Profile(username: "Mike")
     

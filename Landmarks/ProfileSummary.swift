@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ProfileSummary: View {
+    var profile: Profile
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 10) {
+            Text(profile.username)
+                .bold()
+                .font(.title)
+            Text("Notification: \(profile.prefersNotification ? "On" : "Off")")
+            Text("Season Photo: \(profile.seasonalPhoto.rawValue)")
+        }
     }
 }
 
 #Preview {
-    ProfileSummary()
+    ProfileSummary(profile: Profile.default)
 }
